@@ -8,11 +8,9 @@ A practical, end-to-end learning path for anyone who wants to become a **Quality
 ## 📚 Contents
 
 - [Introduction](#introduction)
-- [Why Testing Matters](#why-testing-matters)
+- [How to Report and Document Software Issue )
 - [Test Plan Sample](#test-plan-sample)
 - [QA Learning Roadmap](#qa-learning-roadmap)
-- [Key Advice for Testers](#key-advice-for-testers)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -29,40 +27,184 @@ For QA engineers, this means:
 
 This repository provides a structured path to help you start and grow your **QA and software testing journey**.
 
----
 
-## Why Testing Matters
 
-Software testing is the art of systematically investigating an application to find defects, gaps, or deviations from requirements. Good testing:
 
-- Prevents bugs from reaching end users.
-- Builds confidence in releases.
-- Saves time and money by catching issues early.
-- Improves overall product quality and user experience.
-
-Whether you're doing **manual testing**, **automation**, **API testing**, or **performance testing**, the core principle remains: **validate that the software behaves as intended under expected and edge-case conditions.**
 
 ---
 
-## Test Plan Sample
+# 🐞 How to Report and Document Software Issue / Bug using **Trello, Jira, GitHub Issues**, or any issue-tracking platform.
 
-One of the most important documents a QA team produces is the **Test Plan**. Without it, the team risks:
+A structured guide for reporting, documenting, prioritizing, and tracking software defects 
 
-- Working without clear criteria or scope.
-- Missing critical testing types or phases.
-- Delivering low-quality code due to unstructured efforts.
+---
 
-A well-written test plan defines:
+## 🗂️ 01 — Where to Log Bugs
 
-- Objectives and scope.
-- Testing types and levels (unit, integration, system, acceptance).
-- Resources, tools, and environments.
-- Entry and exit criteria.
-- Risks and mitigations.
-- Schedule and deliverables.
+| Platform             | Workflow                 | Action             |
+| -------------------- | ------------------------ | ------------------ |
+| 📋 **Trello**        | Board → Backlog / Bugs   | ➕ New Card         |
+| 🎯 **Jira**          | Project → Create         | 🐞 Issue Type: Bug |
+| 🐙 **GitHub Issues** | Repository → Issues      | 🐞 New Bug Report  |
+| 🔧 **Other Tools**   | Project → Issues/Tickets | 🐞 Create Bug      |
 
-The sample test plan provided here is generic and adaptable to most software delivery contexts.
+> 🏷️ **Always label defects as:** `bug`
 
+---
+
+## 📝 02 — Bug Report Structure
+
+Use the following template when creating a bug ticket:
+
+```md
+# 🐞 Bug Report
+
+## Summary
+<!-- One-line description of the defect -->
+
+## Steps to Reproduce
+1.
+2.
+3.
+
+## Expected Result
+<!-- What should happen -->
+
+## Actual Result
+<!-- What actually happens -->
+
+## Environment
+- Environment: Dev / Staging / Production
+- URL: https://your-app-url.com/path
+- Browser / OS / Device:
+- User Role:
+- Build / Version:
+
+## Evidence
+- Screenshots:
+- Screen Recordings:
+- Logs / Console Errors:
+
+## Severity / Priority
+- Severity: Low / Medium / High / Critical
+- Priority: Low / Medium / High
+
+## Additional Notes
+<!-- Related tickets, workarounds, or other information -->
+```
+
+---
+
+## 🎯 03 — Severity vs Priority
+
+### 💥 Severity — How Much Does It Impact the System?
+
+| Level           | Impact                                        | Example                     |
+| --------------- | --------------------------------------------- | --------------------------- |
+| 🔴 **Critical** | System unavailable, data loss, security issue | Application completely down |
+| 🟠 **High**     | Major functionality broken                    | Payment process fails       |
+| 🟡 **Medium**   | Feature partially broken                      | Workaround available        |
+| 🟢 **Low**      | Minor/cosmetic issue                          | Incorrect text or alignment |
+
+### ⚡ Priority — How Quickly Should It Be Fixed?
+
+| Level         | Action            | Meaning                 |
+| ------------- | ----------------- | ----------------------- |
+| 🔴 **High**   | Fix immediately   | Current release/sprint  |
+| 🟡 **Medium** | Fix soon          | Next sprint / near-term |
+| 🟢 **Low**    | Fix when possible | Nice-to-have            |
+
+---
+
+## 🔄 04 — Bug Reporting Workflow
+
+```text
+🔍 FIND DEFECT
+      ↓
+📝 DOCUMENT ISSUE
+      ↓
+🏷️ SET SEVERITY
+      ↓
+⚡ SET PRIORITY
+      ↓
+📎 ATTACH EVIDENCE
+      ↓
+👨‍💻 ASSIGN TO DEVELOPER
+      ↓
+🛠️ FIX IMPLEMENTED
+      ↓
+🧪 QA VERIFICATION
+      ↓
+✅ PASS → CLOSE
+      ↓
+❌ FAIL → REOPEN
+```
+
+---
+
+## 🧪 05 — Filled Bug Example
+
+### 🐞 `[BUG] Form accepts invalid input without showing error`
+
+| Field            | Details                              |
+| ---------------- | ------------------------------------ |
+| **Summary**      | Required field validation is missing |
+| **Environment**  | Staging                              |
+| **Browser / OS** | Chrome / Windows                     |
+| **User Role**    | Standard User                        |
+| **Version**      | Latest                               |
+| **Severity**     | 🟡 Medium                            |
+| **Priority**     | 🟡 Medium                            |
+
+### 🔁 Steps to Reproduce
+
+1. Log in with a valid account.
+2. Navigate to the relevant form.
+3. Leave a required field empty or enter invalid data.
+4. Click **Submit**.
+
+### ✅ Expected Result
+
+The form should display a validation error and prevent submission.
+
+### ❌ Actual Result
+
+The form submits successfully without displaying a validation error.
+
+### 📎 Evidence
+
+* 📸 Screenshot: Attach screenshot
+* 🎥 Screen recording: Attach recording
+* 🖥️ Console: No errors displayed
+
+### 📌 Additional Notes
+
+The issue affects all users and appears to be related to recent form changes.
+
+---
+
+## 📊 06 — Bug Documentation Checklist
+
+| #  | Requirement              | Status |
+| -- | ------------------------ | ------ |
+| 01 | 📝 Clear bug summary     | ☐      |
+| 02 | 🔁 Reproduction steps    | ☐      |
+| 03 | ✅ Expected result        | ☐      |
+| 04 | ❌ Actual result          | ☐      |
+| 05 | 💻 Environment details   | ☐      |
+| 06 | 📎 Evidence attached     | ☐      |
+| 07 | 💥 Severity assigned     | ☐      |
+| 08 | ⚡ Priority assigned      | ☐      |
+| 09 | 👨‍💻 Developer assigned | ☐      |
+| 10 | 🧪 Retested after fix    | ☐      |
+
+---
+
+## 💡 QA Principle
+
+**Clear steps + reproducible results + strong evidence = faster fixes.**
+
+A good bug report should allow a developer or QA engineer to understand and reproduce the defect **without needing additional clarification**.
 
 ---
 
