@@ -1,14 +1,15 @@
-## Contribution Guidelines
-Thank you for your interest in contributing!
+## Purpose
 
-Please ensure your pull request adheres to the following guidelines:
+The **Complete QA Roadmap** repository provides a practical learning path for anyone who wants to start or grow a career in Quality Assurance and software testing.
 
-- The purpose of this list is to increase the knowledge of testers and to discover new tools to help you on the way.
-- This QA and Testing road map includes the most important skills and knowledge that you require to start a career with. NOT EVERY THING!
-- You can use issues for requests/ improvements
-- Feel free to provide a translated versions.
-- Keep descriptions short and simple, but descriptive.
-- End all descriptions with a full stop/period.
-- Check your spelling and grammar.
-- Make sure your text editor is set to remove trailing whitespace.
-- When you issue a pull request, you agree that your contribution is in the public domain (guided by the CC0 license).
+It helps testers discover essential QA skills, testing concepts, tools, and resources, including:
+
+- Manual testing and test-case design.
+- Software development and testing lifecycles.
+- Bug reporting and defect management.
+- API testing and automation testing.
+- Performance, security, and usability testing.
+- CI/CD, DevOps, version control, and collaboration tools.
+- QA documentation, test plans, and professional testing practices.
+
+This roadmap is designed as a guide for learning and career growth. It covers important foundations and modern QA topics, but it does not contain everything required to become a software tester or QA Engineer.
